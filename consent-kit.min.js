@@ -1,5 +1,5 @@
 /*!
- * ConsentKit v1.0.3 — VS Ventures edition
+ * ConsentKit v1.0.4 — VS Ventures edition
  * Cookie consent banner + preferences + Google Consent Mode v2.
  * Default: opt-in (PIPEDA / CASL / Quebec Law 25). EN + FR-CA.
  * Works on plain HTML, WordPress and Webflow. No dependencies.
