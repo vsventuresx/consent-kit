@@ -1,0 +1,36 @@
+<!--
+  HEAD SNIPPET  ·  VS Ventures edition  ·  paste as the FIRST thing in <head>
+  ---------------------------------------------------------------------------
+  Webflow:    Site settings > Custom code > Head code (top of the box)
+  WordPress:  WPCode > Header, priority 1 (or header.php right after <head>)
+  Plain HTML: first lines inside <head>
+
+  Must load BEFORE Google Tag Manager, gtag.js, Meta Pixel or any tracking.
+  Do NOT add async or defer. Edit only the config object (see README.md).
+-->
+<script>
+  window.ConsentKitConfig = {
+    company: '{{COMPANY_NAME}}',
+    policyUrl: '/privacy-policy/',
+    lang: 'en',              // 'fr' for Quebec / French sites
+    version: '1',            // bump when the client adds a new tracking tool, to ask everyone again
+    layout: 'box',           // 'box' or 'bar'
+    // firstLayerReject: false,   // hides Reject on the banner. Only with mode: 'opt-out' (see README)
+    theme: {
+      accent: '#111111',     // client's brand colour (Accept button fill, Reject button outline)
+      accentText: '#ffffff',
+      background: '#ffffff',
+      text: '#1a1a1a'
+    },
+    // Cookies listed here also appear in the table on /privacy-policy/.
+    categories: [
+      { id: 'functional', cookies: [
+        // { name: 'example_chat', provider: 'Chat widget', purpose: 'Keeps your chat session open', duration: 'Session' }
+      ] }
+      // { id: 'functional', disabled: true }   // hide a category the site doesn't use
+    ]
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/gh/vsventuresx/consent-kit@1/consent-kit.min.js"></script>
+
+<!-- Google tag / GTM / Meta Pixel go BELOW this line. -->

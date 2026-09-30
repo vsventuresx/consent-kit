@@ -1,0 +1,270 @@
+<!--
+  PRIVACY POLICY TEMPLATE  ·  VS Ventures edition (Canada)  ·  paste at /privacy-policy/
+  ---------------------------------------------------------------------------
+  Written for Canadian businesses under PIPEDA and CASL.
+  1. Find-and-replace every placeholder listed at the bottom of this comment.
+  2. Optional blocks - keep or delete the whole block, markers included:
+       <!- - [QUEBEC] - ->  only if the client serves Quebec residents
+       <!- - [SMS] - ->     only if the client sends marketing texts
+       <!- - [AI] - ->      only if AI tools touch personal information
+  3. The cookie table and "current choices" fill in automatically from
+     consent-kit.js. Edit cookies in the head-snippet config, not here.
+  4. Webflow: Embed element (split into 2-3 embeds if you hit the limit).
+     WordPress: Custom HTML block. Plain HTML: inside <main>.
+  Starting point, not legal advice. Have counsel review before publishing.
+
+  PLACEHOLDERS  (VS Code: Ctrl/Cmd+Shift+H to find & replace each one;
+  afterwards search with regex  \{\{[A-Z_]+\}\}  to confirm none are left)
+  ---------------------------------------------------------------------------
+  {{LAST_UPDATED}}                     Date this policy was published
+                                       e.g. September 29, 2026
+  {{PRIVACY_EMAIL}}                    Inbox for privacy requests
+                                       e.g. privacy@acmecoffee.com
+  {{COMPANY_LEGAL_NAME}}               Registered legal entity name
+                                       e.g. Acme Coffee Roasters Inc.
+  {{COMPANY_NAME}}                     Brand / operating name
+                                       e.g. Acme Coffee
+  {{MAILING_ADDRESS}}                  Full mailing address, one line
+                                       e.g. 123 Queen St W, Toronto, ON M5H 2N2
+  {{WEBSITE_URL}}                      Site URL, no trailing slash
+                                       e.g. https://acmecoffee.com
+  {{PRIVACY_OFFICER_NAME}}             Person accountable for privacy
+                                       e.g. Jane Smith
+  {{PRIVACY_OFFICER_TITLE}}            Their role
+                                       e.g. Operations Manager
+  {{PHONE}}                            Business phone
+                                       e.g. (519) 555-0123
+  {{EDIT_OR_REMOVE_IF_NOT_APPLICABLE}} Delete this token (and the sentence before it if the client gets no data from others)
+                                       e.g. (delete)
+  {{SMS_TOPICS}}                       What texts are about (SMS block only)
+                                       e.g. appointment reminders and special offers
+  {{WEBSITE_PLATFORM}}                 Site builder / host
+                                       e.g. Webflow
+  {{PAYMENT_PROVIDERS}}                Payment + accounting tools
+                                       e.g. Stripe and QuickBooks
+  {{OTHER_PROVIDERS_OR_DELETE}}        Any other tool that sees personal info, or delete the whole <li>
+                                       e.g. Calendly (appointment booking)
+  {{LEAD_RETENTION}}                   How long unconverted leads are kept
+                                       e.g. 24 months
+  {{CLIENT_RETENTION}}                 How long client records are kept after the relationship
+                                       e.g. 7 years
+-->
+<style>
+  .ck-policy{max-width:760px;margin:0 auto;padding:48px 20px 80px;line-height:1.65;font-size:17px}
+  .ck-policy h1{font-size:2.2em;line-height:1.15;margin:0 0 .25em}
+  .ck-policy h2{font-size:1.35em;line-height:1.3;margin:2.2em 0 .6em;scroll-margin-top:90px}
+  .ck-policy h3{font-size:1.05em;margin:1.6em 0 .4em}
+  .ck-policy p,.ck-policy ul{margin:0 0 1em}
+  .ck-policy ul{padding-left:1.3em}
+  .ck-policy li{margin:.3em 0}
+  .ck-policy a{text-decoration:underline;text-underline-offset:2px}
+  .ck-policy .ck-updated{opacity:.7;font-size:.9em;margin-bottom:2em}
+  .ck-policy .ck-summary{border:1px solid rgba(0,0,0,.12);border-radius:12px;padding:20px 24px;margin:0 0 2em;background:rgba(0,0,0,.025)}
+  .ck-policy .ck-summary h2{margin-top:0;font-size:1.1em}
+  .ck-policy .ck-summary ul{margin:0}
+  .ck-policy .ck-toc{columns:2;column-gap:32px;font-size:.95em;padding-left:1.3em}
+  .ck-policy .ck-btn{display:inline-block;font:inherit;font-size:.95em;font-weight:600;padding:10px 20px;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer;margin:.4em 0 1.2em}
+  .ck-policy .ck-contact{border-left:3px solid currentColor;padding:4px 0 4px 16px;margin:1em 0 1.5em}
+  .ck-policy .ckt-group{margin:1.4em 0}
+  .ck-policy .ckt-h{margin:0 0 .2em}
+  .ck-policy .ckt-d{font-size:.92em;opacity:.8;margin-bottom:.6em}
+  .ck-policy .ckt-scroll{overflow-x:auto}
+  .ck-policy table.ckt{width:100%;border-collapse:collapse;font-size:.88em;min-width:520px}
+  .ck-policy .ckt th,.ck-policy .ckt td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(0,0,0,.12);vertical-align:top}
+  .ck-policy .ckt th{font-weight:600}
+  .ck-policy .ckt code{font-size:.95em}
+  .ck-policy .ckt-none{font-size:.9em;opacity:.7;font-style:italic}
+  .ck-policy ul.ckt-status{list-style:none;padding:0;margin:.4em 0}
+  .ck-policy .ckt-status-meta{font-size:.8em;opacity:.6}
+  @media (max-width:600px){.ck-policy{font-size:16px;padding-top:32px}.ck-policy .ck-toc{columns:1}}
+</style>
+
+<article class="ck-policy">
+  <h1>Privacy Policy</h1>
+  <p class="ck-updated">Last updated: {{LAST_UPDATED}}</p>
+
+  <div class="ck-summary">
+    <h2>The short version</h2>
+    <ul>
+      <li>We collect what you give us, like your name and email when you contact us. We also collect some information automatically through cookies, based on the choices you make.</li>
+      <li>We use it to reply to you, provide our services, improve our website and, with your permission where required, send you marketing.</li>
+      <li><strong>We don't sell your personal information.</strong></li>
+      <li>You decide which non-essential cookies we use. You can unsubscribe from our emails at any time.</li>
+      <li>You can ask to see, correct or delete your information by emailing <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a>.</li>
+    </ul>
+  </div>
+
+  <ol class="ck-toc">
+    <li><a href="#who-we-are">Who we are</a></li>
+    <li><a href="#what-we-collect">What we collect</a></li>
+    <li><a href="#how-we-use-it">How we use it</a></li>
+    <li><a href="#cookies">Cookies and tracking</a></li>
+    <li><a href="#email-and-sms">Email and text messages</a></li>
+    <li><a href="#sharing">Who we share it with</a></li>
+    <li><a href="#storage">Where it's stored</a></li>
+    <li><a href="#retention">How long we keep it</a></li>
+    <li><a href="#security">How we protect it</a></li>
+    <li><a href="#your-rights">Your rights and choices</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+    <li><a href="#contact">Contact us</a></li>
+  </ol>
+
+  <!-- 1 -->
+  <h2 id="who-we-are">1. Who we are</h2>
+  <p>This website is operated by {{COMPANY_LEGAL_NAME}}, doing business as {{COMPANY_NAME}} ("we", "us", "our"). Our address is {{MAILING_ADDRESS}}.</p>
+  <p>This policy explains how we handle personal information collected through {{WEBSITE_URL}}, our forms, our emails and text messages, and our client relationships.</p>
+  <p>We're responsible for the personal information under our control, including information we pass to service providers who work for us. We follow Canada's <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and Canada's Anti-Spam Legislation (CASL).</p>
+  <!-- [QUEBEC] -->
+  <p>For residents of Quebec, we also follow the <em>Act respecting the protection of personal information in the private sector</em>. Our person in charge of the protection of personal information is named below.</p>
+  <!-- [/QUEBEC] -->
+  <p>Our Privacy Officer is responsible for this policy and for questions about it:</p>
+  <div class="ck-contact">
+    {{PRIVACY_OFFICER_NAME}}, {{PRIVACY_OFFICER_TITLE}}<br>
+    <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a> · {{PHONE}}<br>
+    {{MAILING_ADDRESS}}
+  </div>
+
+  <!-- 2 -->
+  <h2 id="what-we-collect">2. What we collect</h2>
+  <h3>Information you give us</h3>
+  <ul>
+    <li><strong>When you contact us or request a quote:</strong> your name, email, phone number, company, and anything you write in your message.</li>
+    <li><strong>When you subscribe:</strong> your email address and name, and the topics you choose.</li>
+    <li><strong>When you book a call or become a client:</strong> contact and billing details, project information, and our communications with you.</li>
+  </ul>
+  <h3>Information collected automatically</h3>
+  <p>When you visit our website, cookies and similar tools may record the pages you view, how you arrived, your device and browser type, your approximate location based on your IP address, and how you interact with the site. Which of these tools run depends on the choices you make. See <a href="#cookies">Cookies and tracking</a>.</p>
+  <h3>Information from others</h3>
+  <p>We may receive information from advertising platforms (usually in aggregated form), from people who refer you to us, and from public sources such as business directories and professional profiles. {{EDIT_OR_REMOVE_IF_NOT_APPLICABLE}}</p>
+  <p>Please don't send us sensitive information, such as health details, government ID numbers or banking information, through our website forms. We don't need it at that stage.</p>
+
+  <!-- 3 -->
+  <h2 id="how-we-use-it">3. How we use it</h2>
+  <p>We use personal information only for the purposes we explain here, or purposes you'd reasonably expect:</p>
+  <ul>
+    <li>To respond to your inquiry and give you information or a quote you asked for</li>
+    <li>To provide our services and manage our relationship with you, including scheduling, invoicing and support</li>
+    <li>To send you marketing emails or text messages, but only if you've agreed or the law otherwise allows it (see <a href="#email-and-sms">Email and text messages</a>)</li>
+    <li>To understand how our website is used so we can improve it (analytics cookies, if you allow them)</li>
+    <li>To measure our advertising and show you relevant ads (marketing cookies, if you allow them)</li>
+    <li>To protect our website and business from spam, fraud and security threats</li>
+    <li>To meet our legal, tax and accounting obligations</li>
+  </ul>
+  <p>If we want to use your information for a new purpose, we'll tell you first and, where required, ask for your consent.</p>
+
+  <!-- [AI] -->
+  <h3>AI and automated tools</h3>
+  <p>We use AI-assisted tools for some tasks, such as organizing inquiries, summarizing notes and drafting replies. A person on our team reviews anything important before it is sent or acted on. We don't use automated tools to make decisions about you that have legal or similarly significant effects. Where the option is available, we choose providers and settings that don't use your information to train their models.</p>
+  <!-- [/AI] -->
+
+  <!-- 4 -->
+  <h2 id="cookies">4. Cookies and tracking</h2>
+  <p>Cookies are small files stored in your browser. We also use similar tools, including tracking pixels, tags and local storage. We call all of these "cookies" in this section. We group them by what they do:</p>
+  <ul>
+    <li><strong>Strictly necessary:</strong> required for the site to work. Always on.</li>
+    <li><strong>Functional:</strong> enable features like chat, booking and video.</li>
+    <li><strong>Analytics:</strong> help us understand how the site is used.</li>
+    <li><strong>Marketing:</strong> let us and our ad partners measure ads and show relevant ones.</li>
+  </ul>
+  <p>Non-essential cookies stay off until you choose to turn them on.</p>
+
+  <h3>Your current choices</h3>
+  <div data-consentkit-status><p>Enable JavaScript to view your current choices.</p></div>
+  <button type="button" class="ck-btn" data-cookie-settings>Change cookie settings</button>
+
+  <p>When you decline analytics or marketing cookies, Google's tags on this site switch to a mode that doesn't store cookies for those purposes.</p>
+
+  <h3>Cookies we use</h3>
+  <div data-consentkit-table><p>Enable JavaScript to view the full list of cookies.</p></div>
+
+  <h3>Other ways to control tracking</h3>
+  <ul>
+    <li>Most browsers let you block or delete cookies in their settings.</li>
+    <li>Google ad settings: <a href="https://myadcenter.google.com" rel="noopener" target="_blank">myadcenter.google.com</a></li>
+    <li>Meta ad preferences: <a href="https://www.facebook.com/adpreferences" rel="noopener" target="_blank">facebook.com/adpreferences</a></li>
+    <li>Google Analytics opt-out add-on: <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">tools.google.com/dlpage/gaoptout</a></li>
+  </ul>
+
+  <!-- 5 -->
+  <h2 id="email-and-sms">5. Email and text messages</h2>
+  <h3>Email</h3>
+  <p>We send marketing emails only to people who asked for them, or where the law allows us to because of an existing business relationship.</p>
+  <p>Under CASL, an existing business relationship covers two years after your last purchase or contract with us, or six months after you inquire. Before that period ends, we'll ask whether you'd like to keep hearing from us.</p>
+  <p>Every marketing email identifies us, includes our mailing address, and has an unsubscribe link. We process unsubscribe requests promptly, and within 10 business days at most. After you unsubscribe, we keep your email address on a suppression list only so we don't email you again.</p>
+  <p>Our emails may contain a small tracking pixel and tracked links. These tell us whether an email was opened and which links were clicked, which helps us send more useful content. Most email apps let you block images to prevent this.</p>
+  <p>You'll still receive transactional or service messages, such as replies to your inquiry, invoices and project updates, even after unsubscribing from marketing.</p>
+
+  <!-- [SMS] -->
+  <h3>Text messages</h3>
+  <p>If you opt in to text messages, we'll send messages about {{SMS_TOPICS}}. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time, or <strong>HELP</strong> for help. Consent to receive texts is not a condition of any purchase.</p>
+  <p><strong>We do not share mobile phone numbers or text-message opt-in consent with third parties or affiliates for their marketing or promotional purposes.</strong> Information may be shared only with service providers who help us deliver messages.</p>
+  <!-- [/SMS] -->
+
+  <!-- 6 -->
+  <h2 id="sharing">6. Who we share it with</h2>
+  <p><strong>We don't sell or rent your personal information.</strong> We share it only with trusted service providers who help us run our business. Our contracts require them to protect it and use it only for the work they do for us. These include:</p>
+  <ul>
+    <li><strong>Website hosting:</strong> {{WEBSITE_PLATFORM}}</li>
+    <li><strong>CRM, email and text messaging:</strong> HighLevel (GoHighLevel)</li>
+    <li><strong>Analytics and advertising:</strong> Google (Analytics, Ads) and Meta (Facebook, Instagram)</li>
+    <li><strong>Payments and accounting:</strong> {{PAYMENT_PROVIDERS}}</li>
+    <li><strong>Professional advisors:</strong> accountants and lawyers, under confidentiality obligations</li>
+    <li>{{OTHER_PROVIDERS_OR_DELETE}}</li>
+  </ul>
+  <p>We may also disclose information when the law requires it, to protect our rights or someone's safety, or as part of a sale or merger of our business. In a sale or merger, the buyer must continue to protect it as described here.</p>
+
+  <!-- 7 -->
+  <h2 id="storage">7. Where it's stored</h2>
+  <p>Some of our service providers store or process information outside Canada, including in the United States. While it's there, it's subject to the laws of that country and may be accessible to its courts, law enforcement and national security authorities. We remain responsible for it, and we use contracts to require a comparable level of protection.</p>
+  <!-- [QUEBEC] -->
+  <p>Before transferring personal information of Quebec residents outside Quebec, we assess whether it will be adequately protected, as Quebec law requires.</p>
+  <!-- [/QUEBEC] -->
+
+  <!-- 8 -->
+  <h2 id="retention">8. How long we keep it</h2>
+  <ul>
+    <li><strong>Inquiries that don't lead to working together:</strong> up to {{LEAD_RETENTION}} (e.g. 24 months), then deleted</li>
+    <li><strong>Client records:</strong> for the length of our relationship, plus as long as tax and legal rules require (usually up to {{CLIENT_RETENTION}} (e.g. 7 years))</li>
+    <li><strong>Marketing lists:</strong> until you unsubscribe or your consent expires. Suppression records are kept so we honor your choice.</li>
+    <li><strong>Cookies:</strong> for the durations listed in the table above</li>
+  </ul>
+  <p>When we no longer need information, we delete or anonymize it.</p>
+
+  <!-- 9 -->
+  <h2 id="security">9. How we protect it</h2>
+  <p>We use reasonable safeguards appropriate to the sensitivity of the information. These include encrypted connections (HTTPS), access controls, two-factor authentication on our business systems, and limiting access to team members who need it. No system is perfectly secure. If a breach creates a real risk of significant harm, we'll notify you and the appropriate regulators as the law requires.</p>
+
+  <!-- 10 -->
+  <h2 id="your-rights">10. Your rights and choices</h2>
+  <p>You can ask us to:</p>
+  <ul>
+    <li><strong>Access</strong> the personal information we hold about you and learn how it has been used and shared</li>
+    <li><strong>Correct</strong> information that's inaccurate or incomplete</li>
+    <li><strong>Withdraw consent</strong> to a use of your information, such as marketing, at any time</li>
+    <li><strong>Delete</strong> your information, unless we're required to keep it by law</li>
+    <li><strong>Opt out</strong> of marketing emails, texts and non-essential cookies (see above)</li>
+  </ul>
+  <p>We'll respond within 30 days. Access is free in most cases, and we'll tell you in advance if any cost applies. If you're not satisfied with our response, you can complain to the Office of the Privacy Commissioner of Canada at <a href="https://www.priv.gc.ca" rel="noopener" target="_blank">priv.gc.ca</a> or 1-800-282-1376.</p>
+  <!-- [QUEBEC] -->
+  <p>Quebec residents can also contact the Commission d'accès à l'information du Québec at <a href="https://www.cai.gouv.qc.ca" rel="noopener" target="_blank">cai.gouv.qc.ca</a>.</p>
+  <!-- [/QUEBEC] -->
+  <p><strong>How to make a request:</strong> email <a href="mailto:{{PRIVACY_EMAIL}}?subject=Privacy%20request">{{PRIVACY_EMAIL}}</a> with the subject "Privacy request" and tell us what you'd like us to do. We'll confirm your identity before acting, usually by replying to the email address we have on file. You can also ask someone to make a request on your behalf with your written permission.</p>
+
+  <!-- 11 -->
+  <h2 id="children">11. Children</h2>
+  <p>Our website and services are meant for adults and businesses. We don't knowingly collect personal information from children. If you believe a child has given us their information, contact us and we'll delete it.</p>
+
+  <!-- 12 -->
+  <h2 id="changes">12. Changes to this policy</h2>
+  <p>We'll update this policy when our practices or the law change, and revise the "Last updated" date above. If we make a significant change, we'll ask for your cookie choices again or let you know by email or on our website.</p>
+
+  <!-- 13 -->
+  <h2 id="contact">13. Contact us</h2>
+  <div class="ck-contact">
+    <strong>{{COMPANY_NAME}}</strong> ({{COMPANY_LEGAL_NAME}})<br>
+    Attn: Privacy Officer, {{PRIVACY_OFFICER_NAME}}<br>
+    {{MAILING_ADDRESS}}<br>
+    <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a> · {{PHONE}}
+  </div>
+</article>

@@ -1,0 +1,75 @@
+<!--
+  CASL EMAIL FOOTER  ·  VS Ventures edition
+  ---------------------------------------------------------------------------
+  Paste into the footer block of the email template (GHL, Mailchimp, etc.).
+  Inline styles + table layout because email clients strip <style> tags.
+
+  Replace:
+    {{UNSUBSCRIBE_URL}}  -> the platform's unsubscribe merge tag / link
+    {{PREFERENCES_URL}}  -> the platform's preference-centre link (or delete that link)
+    {{REASON}}           -> one line from the list below, per list/segment
+
+  REASON options (one per audience, and it must be true):
+    Express consent:    you subscribed to our newsletter at {{WEBSITE_DOMAIN}}
+    Existing client:    you're a client of {{COMPANY_NAME}}                    (implied, 2 years from last purchase/contract)
+    Recent inquiry:     you contacted us about our services in the last six months   (implied, 6 months)
+    Event / download:   you registered for {{EVENT_OR_RESOURCE}} and asked to hear from us
+
+  CASL requirements this footer covers:
+    - Identifies the sender, and the client when VS Ventures sends on their behalf
+    - Mailing address + at least one other contact method (email, phone or web)
+    - A working unsubscribe, valid for at least 60 days after sending
+    - Unsubscribes processed within 10 business days
+
+  Use ONE footer per email. If the platform adds its own unsubscribe footer (GHL can),
+  either turn that off or delete the duplicate links here.
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #e5e5e5;">
+  <tr>
+    <td align="center" style="padding:28px 24px 32px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#6b6b6b;">
+
+      <p style="margin:0 0 10px;">
+        You're receiving this email because {{REASON}}.
+      </p>
+
+      <p style="margin:0 0 10px;">
+        <strong style="color:#333333;">{{COMPANY_NAME}}</strong> is the operating name of {{COMPANY_LEGAL_NAME}}<br>
+        {{MAILING_ADDRESS}}<br>
+        <a href="mailto:{{CONTACT_EMAIL}}" style="color:#6b6b6b;text-decoration:underline;">{{CONTACT_EMAIL}}</a>
+        &nbsp;·&nbsp; {{PHONE}}
+        &nbsp;·&nbsp; <a href="{{WEBSITE_URL}}" style="color:#6b6b6b;text-decoration:underline;">{{WEBSITE_DOMAIN}}</a>
+      </p>
+
+      <!-- AGENCY LINE: keep only when VS Ventures sends on the client's behalf -->
+      <p style="margin:0 0 10px;">
+        This message is sent by VS Ventures (1001622364 Ontario Inc.) on behalf of {{COMPANY_NAME}}.
+      </p>
+      <!-- /AGENCY LINE -->
+
+      <p style="margin:0;">
+        <a href="{{UNSUBSCRIBE_URL}}" style="color:#333333;text-decoration:underline;font-weight:bold;">Unsubscribe</a>
+        &nbsp;·&nbsp;
+        <a href="{{PREFERENCES_URL}}" style="color:#6b6b6b;text-decoration:underline;">Update email preferences</a>
+        &nbsp;·&nbsp;
+        <a href="{{WEBSITE_URL}}/privacy-policy/" style="color:#6b6b6b;text-decoration:underline;">Privacy Policy</a>
+      </p>
+
+    </td>
+  </tr>
+</table>
+
+<!--
+  PLAIN-TEXT VERSION
+  ---------------------------------------------------------------------------
+You're receiving this email because {{REASON}}.
+
+{{COMPANY_NAME}} is the operating name of {{COMPANY_LEGAL_NAME}}
+{{MAILING_ADDRESS}}
+{{CONTACT_EMAIL}} | {{PHONE}} | {{WEBSITE_DOMAIN}}
+
+This message is sent by VS Ventures (1001622364 Ontario Inc.) on behalf of {{COMPANY_NAME}}.
+
+Unsubscribe: {{UNSUBSCRIBE_URL}}
+Update preferences: {{PREFERENCES_URL}}
+Privacy Policy: {{WEBSITE_URL}}/privacy-policy/
+-->

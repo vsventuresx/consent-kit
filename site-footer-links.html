@@ -1,0 +1,22 @@
+<!--
+  SITE FOOTER PRIVACY LINKS  ·  VS Ventures edition
+  ---------------------------------------------------------------------------
+  Add to the global footer (Webflow: Embed inside the footer component.
+  WordPress: footer widget/block. Plain HTML: inside <footer>).
+  "Cookie settings" re-opens the consent panel. Any link to #cookie-settings works,
+  so you can also build these as native links in Webflow/WordPress.
+  Colours inherit from the footer, so it matches any theme.
+-->
+<nav class="ck-footer-links" aria-label="Privacy">
+  <a href="/privacy-policy/">Privacy Policy</a>
+  <span aria-hidden="true">·</span>
+  <a href="#cookie-settings" data-cookie-settings>Cookie settings</a>
+  <span aria-hidden="true">·</span>
+  <a href="/privacy-policy/#your-rights">Your privacy rights</a>
+</nav>
+<style>
+  .ck-footer-links{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:.875em;color:inherit}
+  .ck-footer-links a{color:inherit;text-decoration:underline;text-underline-offset:2px;opacity:.85}
+  .ck-footer-links a:hover{opacity:1}
+  .ck-footer-links span{opacity:.5}
+</style>
