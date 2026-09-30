@@ -102,6 +102,7 @@ window.ConsentKitConfig = {
   cookieDomain: '',          // '.example.com' to share the choice across subdomains
   layout: 'box',             // 'box' | 'bar'
   floatingButton: true,      // small "Privacy choices" button after a choice is made
+  firstLayerReject: true,    // false = Reject only in the preferences panel (see below)
   reloadOnRevoke: true,
   urlPassthrough: false,
   logEndpoint: '',           // optional: POST each consent record to a Make/Zapier webhook
@@ -116,6 +117,8 @@ window.ConsentKitConfig = {
 ```
 
 **Design:** *Accept all* is filled with `accent`. *Reject non-essential* uses the panel's `background` with an `accent` outline. Both buttons are the same size and sit in the same row. Keep it that way: a smaller or hidden reject option is what regulators treat as a dark pattern.
+
+**Hiding Reject on the banner (`firstLayerReject: false`):** the banner shows *Customize* (outlined) and *Accept all*. Reject and the toggles stay in the preferences panel. **Don't use this with opt-in mode.** Making refusal take more clicks than acceptance is a recognized dark pattern (OPC, Quebec CAI, EU). Only use it for a client you've switched to `mode: 'opt-out'`.
 
 **API:** `ConsentKit.open()`, `.get()`, `.has('marketing')`, `.set({...})`, `.acceptAll()`, `.rejectAll()`, `.reset()`, `.on(fn)`, `.scan()`, `.render()`. The kit also dispatches a `consentkit:change` window event.
 

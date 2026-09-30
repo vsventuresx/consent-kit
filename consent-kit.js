@@ -1,5 +1,5 @@
 /*!
- * ConsentKit v1.0.4 — VS Ventures edition
+ * ConsentKit v1.0.5 — VS Ventures edition
  * Cookie consent banner + preferences + Google Consent Mode v2.
  * Default: opt-in (PIPEDA / CASL / Quebec Law 25). EN + FR-CA.
  * Works on plain HTML, WordPress and Webflow. No dependencies.
@@ -120,6 +120,7 @@
     cookieDomain: '',          // e.g. '.example.com' to share one choice across subdomains
     layout: 'box',             // 'box' (bottom-left card) or 'bar' (full-width bottom bar)
     floatingButton: true,      // small "Privacy choices" button after a choice is made
+    firstLayerReject: true,    // false = Reject only in the preferences panel (opt-out/US sites only; see README)
     reloadOnRevoke: true,      // reload page when a category is turned off, so tags stop
     urlPassthrough: false,     // Google Consent Mode url_passthrough
     logEndpoint: '',           // optional URL to POST consent records (proof of consent)
@@ -386,9 +387,12 @@
         '<div class="txt"><p class="title" id="ck-t">' + esc(T.title) + '</p>' +
         '<p class="body">' + esc(T.body) + ' <a href="' + policy + '">' + esc(T.policyLink) + '</a></p></div>' +
         '<div class="actions">' +
-          '<button type="button" class="btn alt" data-a="reject">' + esc(T.reject) + '</button>' +
-          '<button type="button" class="btn" data-a="accept">' + esc(T.accept) + '</button>' +
-          '<button type="button" class="lnk" data-a="custom">' + esc(T.customize) + '</button>' +
+          (cfg.firstLayerReject !== false
+            ? '<button type="button" class="btn alt" data-a="reject">' + esc(T.reject) + '</button>' +
+              '<button type="button" class="btn" data-a="accept">' + esc(T.accept) + '</button>' +
+              '<button type="button" class="lnk" data-a="custom">' + esc(T.customize) + '</button>'
+            : '<button type="button" class="btn alt" data-a="custom">' + esc(T.customize) + '</button>' +
+              '<button type="button" class="btn" data-a="accept">' + esc(T.accept) + '</button>') +
         '</div></div>' +
       '<div class="ov" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="ck-mt">' +
         '<div class="mh"><h2 id="ck-mt">' + esc(T.prefsTitle) + '</h2><button type="button" class="x" data-a="close" aria-label="' + esc(T.close) + '">&times;</button></div>' +
@@ -501,7 +505,7 @@
   /* 9. Public API                                                        */
   /* ------------------------------------------------------------------ */
   w.ConsentKit = {
-    version: '1.0.0',
+    version: '1.0.5',
     open: openPrefs,
     show: showBanner,
     get: function () { return { decided: !!stored, choices: clone(state), record: stored ? clone(stored) : null }; },
